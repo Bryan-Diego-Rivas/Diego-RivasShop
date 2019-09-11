@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Diego-RivasShop</string>
+    <string name="welcome_message">Welcome to the application</string>
+    <string name="button_main">Next</string>
+    <string name="thanks_message">Thanks for using my app!</string>
+    <string name="instruction_message">In the next slide you will be able to buy</string>
+    <string name="button_menu">Proceed</string>
 </resources>
