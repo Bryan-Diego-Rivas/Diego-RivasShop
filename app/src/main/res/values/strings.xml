@@ -5,4 +5,7 @@
     <string name="thanks_message">Thanks for using my app!</string>
     <string name="instruction_message">In the next slide you will be able to buy</string>
     <string name="button_menu">Proceed</string>
+    <string name="menu_title">Shop</string>
+    <string name="amethyst_price">$68.76</string>
+    <string name="amethyst_description">4.50 carat luxury amethyst</string>
 </resources>
