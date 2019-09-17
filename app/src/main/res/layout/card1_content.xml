@@ -5,11 +5,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <TextView
+        android:id="@+id/amethyst_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/amethyst_title"
+        android:textSize="25sp"
+        android:textAlignment="center"/>
+
     <ImageView
         android:id="@+id/amethyst_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/ic_amethyst" />
+        app:srcCompat="@mipmap/ic_foreground_amethyst" />
 
     <TextView
         android:id="@+id/price_text"
