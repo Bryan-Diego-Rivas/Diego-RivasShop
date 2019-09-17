@@ -32,7 +32,8 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="@string/menu_title"
-                android:textSize="30sp"
+                android:textSize="32sp"
+                android:textStyle="bold"
                 android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.468"
@@ -40,6 +41,10 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <include layout="@layout/card1_content" />
+            <include layout="@layout/card2_content" />
+            <include layout="@layout/card3_content" />
+            <include layout="@layout/card4_content" />
+            <include layout="@layout/card5_content" />
         </LinearLayout>
     </ScrollView>
 

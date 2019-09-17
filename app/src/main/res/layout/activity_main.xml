@@ -49,7 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/welcome_text" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/main_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="141dp"
