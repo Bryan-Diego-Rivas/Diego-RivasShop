@@ -8,23 +8,22 @@
     <string name="menu_title">Shop</string>
 
     <string name="amethyst_title">Amethyst</string>
-    <string name="amethyst_price">$68.76</string>
-    <string name="amethyst_description">This gemstone is a 4.50 carat luxury amethyst</string>
+    <string name="amethyst_price">$137.52</string>
+    <string name="amethyst_description">This gemstone is a 9 carat luxury amethyst that comes from Africa</string>
 
     <string name="ruby_title">Ruby</string>
-    <string name="ruby_price">$68.76</string>
-    <string name="ruby_description">This ruby</string>
+    <string name="ruby_price">$515.70</string>
+    <string name="ruby_description">This 9 carat ruby</string>
 
     <string name="yellowDiamond_title">Yellow Diamond</string>
-    <string name="yellowDiamond_price">$68.76</string>
-    <string name="yellowDiamond_description">This polished yellow diamond has been extracted from
-        ... and has been polished</string>
+    <string name="yellowDiamond_price">$10,000</string>
+    <string name="yellowDiamond_description">This polished yellow diamond originates from Mumbai and has been polished</string>
 
     <string name="sapphire_title">Sapphire</string>
-    <string name="sapphire_price">$68.76</string>
-    <string name="sapphire_description">This sapphire</string>
+    <string name="sapphire_price">$429.75</string>
+    <string name="sapphire_description">This is a 9 carat sapphire </string>
 
     <string name="phosphophyllite_title">Phosphophyllite</string>
-    <string name="phosphophyllite_price">$68.76</string>
-    <string name="phosphophyllite_description">This phosphophyllite </string>
+    <string name="phosphophyllite_price">$800</string>
+    <string name="phosphophyllite_description">This incredibly rare and fragile mineral comes from Bolivia. </string>
 </resources>
