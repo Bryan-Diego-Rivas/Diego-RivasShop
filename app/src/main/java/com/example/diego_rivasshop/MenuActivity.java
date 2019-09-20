@@ -13,15 +13,17 @@ public class MenuActivity extends AppCompatActivity {
     private final double YELLOW_DIAMOND_PRICE = 10000;
     private final double SAPPHIRE_PRICE = 429.75;
     private final double PHOSPHOPHYLLITE_PRICE = 800;
+    private final double TPS_PERCENTAGE = .05;
+    private final double TVQ_PERCENTAGE = .09975;
 
     private int amethystAmoount = 0;
     private int rubyAmount = 0;
     private int yellowDiamondAmont = 0;
     private int sapphireAmount = 0;
     private int phosphophylliteAmount = 0;
-    private double subbtotal;
-    private double TPS;
-    private double TVQ;
+    private double subtotal;
+    private double tps;
+    private double tvq;
     private double total;
     private TextView amethystView;
     private TextView rubyView;
@@ -42,6 +44,10 @@ public class MenuActivity extends AppCompatActivity {
 
     public void launchCheckoutActivity(View view) {
         Intent intent = new Intent(this, CheckoutActivity.class);
+        intent.putExtra("subtotal",subtotal);
+        intent.putExtra("tps", tps);
+        intent.putExtra("tvq",tvq);
+        intent.putExtra("total",total);
         startActivity(intent);
     }
 
@@ -52,29 +58,30 @@ public class MenuActivity extends AppCompatActivity {
     public void addItemAll(View view) {
         if (view.equals(findViewById(R.id.add_amethyst_button))) {
             amethystAmoount++;
-            subbtotal += AMETHYST_PRICE;
+            subtotal += AMETHYST_PRICE;
             amethystView.setText(Integer.toString(amethystAmoount));
         }
         if (view.equals(findViewById(R.id.add_ruby_button))) {
             rubyAmount++;
-            subbtotal += RUBY_PRICE;
+            subtotal += RUBY_PRICE;
             rubyView.setText(Integer.toString(rubyAmount));
         }
         if (view.equals(findViewById(R.id.add_yellow_diamond_button))) {
             yellowDiamondAmont++;
-            subbtotal += YELLOW_DIAMOND_PRICE;
+            subtotal += YELLOW_DIAMOND_PRICE;
             yellowDiamondView.setText(Integer.toString(yellowDiamondAmont));
         }
         if (view.equals(findViewById(R.id.add_sapphire_button))) {
             sapphireAmount++;
-            subbtotal += SAPPHIRE_PRICE;
+            subtotal += SAPPHIRE_PRICE;
             sapphireView.setText(Integer.toString(sapphireAmount));
         }
         if (view.equals(findViewById(R.id.add_phosphophyllite_button))) {
             phosphophylliteAmount++;
-            subbtotal += PHOSPHOPHYLLITE_PRICE;
+            subtotal += PHOSPHOPHYLLITE_PRICE;
             phosphophylliteView.setText(Integer.toString(phosphophylliteAmount));
         }
+        calculateTotal();
     }
 
     /**
@@ -83,39 +90,46 @@ public class MenuActivity extends AppCompatActivity {
      */
     public void removeItemAll(View view) {
         if (view.equals(findViewById(R.id.remove_amethyst_button)))
-            if (amethystAmoount > 0 ) {
+            if (amethystAmoount > 0 )  {
                 amethystAmoount--;
-                subbtotal -= AMETHYST_PRICE;
+                subtotal -= AMETHYST_PRICE;
                 amethystView.setText(Integer.toString(amethystAmoount));
             }
         if (view.equals(findViewById(R.id.remove_ruby_button)))
             if (rubyAmount > 0 ) {
                 rubyAmount--;
-                subbtotal -= RUBY_PRICE;
+                subtotal -= RUBY_PRICE;
                 rubyView.setText(Integer.toString(rubyAmount));
             }
         if (view.equals(findViewById(R.id.remove_yellow_diamond_button)))
             if (yellowDiamondAmont > 0 ) {
                 yellowDiamondAmont--;
-                subbtotal -= YELLOW_DIAMOND_PRICE;
+                subtotal -= YELLOW_DIAMOND_PRICE;
                 yellowDiamondView.setText(Integer.toString(yellowDiamondAmont));
             }
         if (view.equals(findViewById(R.id.remove_sapphire_button)))
             if (sapphireAmount > 0 ) {
                 sapphireAmount--;
-                subbtotal -= SAPPHIRE_PRICE;
+                subtotal -= SAPPHIRE_PRICE;
                 sapphireView.setText(Integer.toString(sapphireAmount));
             }
         if (view.equals(findViewById(R.id.remove_phosphophyllite_button)))
             if (phosphophylliteAmount > 0 ) {
                 phosphophylliteAmount--;
-                subbtotal -= PHOSPHOPHYLLITE_PRICE;
+                subtotal -= PHOSPHOPHYLLITE_PRICE;
                 phosphophylliteView.setText(Integer.toString(phosphophylliteAmount));
             }
+        calculateTotal();
     }
 
-    public double calculateTotal() {
-        return 0;
+    /**
+     * Method that calculates the total price with the taxes
+     * @return the total price with taxes
+     */
+    public void calculateTotal() {
+        tps = subtotal * TPS_PERCENTAGE;
+        tvq = subtotal * TVQ_PERCENTAGE;
+        total = subtotal + tps + tvq;
     }
 
 

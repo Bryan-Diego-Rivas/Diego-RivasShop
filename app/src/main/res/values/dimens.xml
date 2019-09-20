@@ -3,4 +3,5 @@
     <dimen name="price_size">30sp</dimen>
     <dimen name="amount_size">25sp</dimen>
     <dimen name="price_label_width">120dp</dimen>
+    <dimen name="checkouttext">30sp</dimen>
 </resources>
