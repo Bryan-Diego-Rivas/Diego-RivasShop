@@ -19,7 +19,7 @@ public class CheckoutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout);
-        //Getting values from the
+        //Getting values from the MenuActivity
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             subtotal = extras.getDouble("sub");
