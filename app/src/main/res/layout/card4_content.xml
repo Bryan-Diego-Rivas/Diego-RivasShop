@@ -19,17 +19,17 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/sapphire_image"
+            android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@mipmap/ic_sapphire_foreground" />
 
         <TextView
-            android:id="@+id/price_text"
-            android:layout_width="wrap_content"
+            android:id="@+id/sapphire_price_label"
+            android:layout_width="@dimen/price_label_width"
             android:layout_height="wrap_content"
             android:text="@string/sapphire_price"
-            android:textSize="30sp"/>
+            android:textSize="@dimen/price_size"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -37,17 +37,18 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/add_button"
-                android:layout_width="wrap_content"
+                android:id="@+id/add_sapphire_button"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Add" />
+                android:text="add"
+                android:onClick="addItemAll"/>
 
             <Button
-                android:id="@+id/remove_button"
-                android:layout_width="wrap_content"
+                android:id="@+id/remove_sapphire_button"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Remove" />
-
+                android:text="remove"
+                android:onClick="removeItemAll"/>
         </LinearLayout>
 
         <LinearLayout
@@ -57,18 +58,16 @@
 
             <TextView
                 android:id="@+id/amount_label"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Amount in the cart:" />
+                android:text="@string/amount_cart" />
 
             <TextView
-                android:id="@+id/amount_text"
-                android:layout_width="wrap_content"
+                android:id="@+id/sapphire_amount_text"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="0"
-                android:textSize="20dp" />
+                android:textSize="@dimen/amount_size"/>
         </LinearLayout>
     </LinearLayout>
 

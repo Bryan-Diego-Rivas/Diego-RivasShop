@@ -25,11 +25,11 @@
             app:srcCompat="@mipmap/ic_foreground_amethyst" />
 
         <TextView
-            android:id="@+id/price_text"
-            android:layout_width="wrap_content"
+            android:id="@+id/amethyst_price_label"
+            android:layout_width="@dimen/price_label_width"
             android:layout_height="wrap_content"
             android:text="@string/amethyst_price"
-            android:textSize="30sp" />
+            android:textSize="@dimen/price_size" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -37,21 +37,23 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/add_button"
+                android:id="@+id/add_amethyst_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add" />
+                android:text="Add"
+                android:onClick="addItemAll"/>
 
             <Button
-                android:id="@+id/remove_button"
-                android:layout_width="wrap_content"
+                android:id="@+id/remove_amethyst_button"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Remove" />
+                android:text="Remove"
+                android:onClick="removeItemAll"/>
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="85dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
@@ -60,15 +62,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Amount in the cart:" />
+                android:text="@string/amount_cart" />
 
             <TextView
-                android:id="@+id/amount_text"
+                android:id="@+id/amethyst_amount_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="0"
-                android:textSize="20dp" />
+                android:textSize="@dimen/amount_size" />
         </LinearLayout>
 
     </LinearLayout>

@@ -6,7 +6,7 @@
     <string name="instruction_message">In the next slide you will be able to buy</string>
     <string name="button_menu">Proceed</string>
     <string name="menu_title">Shop</string>
-
+    <string name="amount_cart">Amount in the cart:</string>
     <string name="amethyst_title">Amethyst</string>
     <string name="amethyst_price">$137.52</string>
     <string name="amethyst_description">This gemstone is a 9 carat luxury amethyst that comes from Africa</string>

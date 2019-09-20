@@ -4,17 +4,119 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class MenuActivity extends AppCompatActivity {
+
+    private final double AMETHYST_PRICE= 137.52;
+    private final double RUBY_PRICE = 515.7;
+    private final double YELLOW_DIAMOND_PRICE = 10000;
+    private final double SAPPHIRE_PRICE = 429.75;
+    private final double PHOSPHOPHYLLITE_PRICE = 800;
+
+    private int amethystAmoount = 0;
+    private int rubyAmount = 0;
+    private int yellowDiamondAmont = 0;
+    private int sapphireAmount = 0;
+    private int phosphophylliteAmount = 0;
+    private double subbtotal;
+    private double TPS;
+    private double TVQ;
+    private double total;
+    private TextView amethystView;
+    private TextView rubyView;
+    private TextView yellowDiamondView;
+    private TextView sapphireView;
+    private TextView phosphophylliteView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+        amethystView = findViewById(R.id.amethyst_amount_text);
+        rubyView = findViewById(R.id.ruby_amount_text);
+        yellowDiamondView = findViewById(R.id.yellow_diamond_amount_text);
+        sapphireView = findViewById(R.id.sapphire_amount_text);
+        phosphophylliteView = findViewById(R.id.phosphophyllite_amount_text);
     }
 
     public void launchCheckoutActivity(View view) {
         Intent intent = new Intent(this, CheckoutActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * Method adds 1 item to the cart each time the button "add" is clicked
+     * @param view the view that is being clicked
+     */
+    public void addItemAll(View view) {
+        if (view.equals(findViewById(R.id.add_amethyst_button))) {
+            amethystAmoount++;
+            subbtotal += AMETHYST_PRICE;
+            amethystView.setText(Integer.toString(amethystAmoount));
+        }
+        if (view.equals(findViewById(R.id.add_ruby_button))) {
+            rubyAmount++;
+            subbtotal += RUBY_PRICE;
+            rubyView.setText(Integer.toString(rubyAmount));
+        }
+        if (view.equals(findViewById(R.id.add_yellow_diamond_button))) {
+            yellowDiamondAmont++;
+            subbtotal += YELLOW_DIAMOND_PRICE;
+            yellowDiamondView.setText(Integer.toString(yellowDiamondAmont));
+        }
+        if (view.equals(findViewById(R.id.add_sapphire_button))) {
+            sapphireAmount++;
+            subbtotal += SAPPHIRE_PRICE;
+            sapphireView.setText(Integer.toString(sapphireAmount));
+        }
+        if (view.equals(findViewById(R.id.add_phosphophyllite_button))) {
+            phosphophylliteAmount++;
+            subbtotal += PHOSPHOPHYLLITE_PRICE;
+            phosphophylliteView.setText(Integer.toString(phosphophylliteAmount));
+        }
+    }
+
+    /**
+     * Removes an item from the cart each time the button "remove" is clicked
+     * @param view the view being clicked
+     */
+    public void removeItemAll(View view) {
+        if (view.equals(findViewById(R.id.remove_amethyst_button)))
+            if (amethystAmoount > 0 ) {
+                amethystAmoount--;
+                subbtotal -= AMETHYST_PRICE;
+                amethystView.setText(Integer.toString(amethystAmoount));
+            }
+        if (view.equals(findViewById(R.id.remove_ruby_button)))
+            if (rubyAmount > 0 ) {
+                rubyAmount--;
+                subbtotal -= RUBY_PRICE;
+                rubyView.setText(Integer.toString(rubyAmount));
+            }
+        if (view.equals(findViewById(R.id.remove_yellow_diamond_button)))
+            if (yellowDiamondAmont > 0 ) {
+                yellowDiamondAmont--;
+                subbtotal -= YELLOW_DIAMOND_PRICE;
+                yellowDiamondView.setText(Integer.toString(yellowDiamondAmont));
+            }
+        if (view.equals(findViewById(R.id.remove_sapphire_button)))
+            if (sapphireAmount > 0 ) {
+                sapphireAmount--;
+                subbtotal -= SAPPHIRE_PRICE;
+                sapphireView.setText(Integer.toString(sapphireAmount));
+            }
+        if (view.equals(findViewById(R.id.remove_phosphophyllite_button)))
+            if (phosphophylliteAmount > 0 ) {
+                phosphophylliteAmount--;
+                subbtotal -= PHOSPHOPHYLLITE_PRICE;
+                phosphophylliteView.setText(Integer.toString(phosphophylliteAmount));
+            }
+    }
+
+    public double calculateTotal() {
+        return 0;
+    }
+
+
 }
