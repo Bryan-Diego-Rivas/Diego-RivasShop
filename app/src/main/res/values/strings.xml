@@ -26,4 +26,10 @@
     <string name="phosphophyllite_title">Phosphophyllite</string>
     <string name="phosphophyllite_price">$800</string>
     <string name="phosphophyllite_description">This incredibly rare and fragile mineral comes from Bolivia. </string>
+    <string name="description_main_gemstone">Picture of a gemstone</string>
+    <string name="checkout_title">Checkout</string>
+    <string name="subtotal_label">Subtotal:</string>
+    <string name="tps_label">TPS:</string>
+    <string name="tvq_label">TVQ:</string>
+    <string name="total_label">Total:</string>
 </resources>

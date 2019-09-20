@@ -44,10 +44,10 @@ public class MenuActivity extends AppCompatActivity {
 
     public void launchCheckoutActivity(View view) {
         Intent intent = new Intent(this, CheckoutActivity.class);
-        intent.putExtra("subtotal",subtotal);
-        intent.putExtra("tps", tps);
-        intent.putExtra("tvq",tvq);
-        intent.putExtra("total",total);
+//        intent.putExtra("subtotal",subtotal);
+//        intent.putExtra("tps", tps);
+//        intent.putExtra("tvq",tvq);
+//        intent.putExtra("total",total);
         startActivity(intent);
     }
 
