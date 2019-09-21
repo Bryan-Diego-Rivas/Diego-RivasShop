@@ -21,9 +21,9 @@
 
         <ImageView
             android:id="@+id/ruby_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/ic_ruby_foreground" />
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
+            app:srcCompat="@drawable/ruby_stone" />
 
         <TextView
             android:id="@+id/ruby_price_label"

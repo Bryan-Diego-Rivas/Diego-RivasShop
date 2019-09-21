@@ -11,12 +11,10 @@
         android:id="@+id/content_scrollview"
         android:layout_width="match_parent"
         android:layout_height="552dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.033">
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <LinearLayout
@@ -32,19 +30,22 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="@string/menu_title"
+                android:textAlignment="center"
                 android:textSize="32sp"
                 android:textStyle="bold"
-                android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.468"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <include layout="@layout/card1_content" />
+
             <include layout="@layout/card2_content" />
+
             <include layout="@layout/card3_content" />
 
             <include layout="@layout/card4_content" />
+
             <include layout="@layout/card5_content" />
         </LinearLayout>
     </ScrollView>
@@ -54,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:onClick="launchCheckoutActivity"
@@ -63,8 +64,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/content_scrollview"
+        app:layout_constraintVertical_bias="0.93"
         tools:ignore="OnClick" />
 
 </android.support.constraint.ConstraintLayout>

@@ -13,6 +13,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    /**
+     * Method that launches the MenuActivity
+     * @param view current view
+     */
     public void launchActivityMenu(View view) {
         Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);

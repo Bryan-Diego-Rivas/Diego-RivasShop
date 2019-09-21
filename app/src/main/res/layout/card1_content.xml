@@ -20,9 +20,9 @@
 
         <ImageView
             android:id="@+id/amethyst_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/ic_foreground_amethyst" />
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
+            app:srcCompat="@drawable/amethyst" />
 
         <TextView
             android:id="@+id/amethyst_price_label"

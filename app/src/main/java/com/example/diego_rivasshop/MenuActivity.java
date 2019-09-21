@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class MenuActivity extends AppCompatActivity {
 
     private final double AMETHYST_PRICE= 137.52;
@@ -40,8 +42,29 @@ public class MenuActivity extends AppCompatActivity {
         yellowDiamondView = findViewById(R.id.yellow_diamond_amount_text);
         sapphireView = findViewById(R.id.sapphire_amount_text);
         phosphophylliteView = findViewById(R.id.phosphophyllite_amount_text);
+
+        //Restoring values
+        if (savedInstanceState != null) {
+            //Retrieving values
+            amethystAmoount = savedInstanceState.getInt("amethystCount");
+            rubyAmount = savedInstanceState.getInt("rubyCount");
+            yellowDiamondAmont = savedInstanceState.getInt("yellowDiamondCount");
+            sapphireAmount = savedInstanceState.getInt("sapphireCount");
+            phosphophylliteAmount = savedInstanceState.getInt("phosphophylliteCount");
+
+            //Setting values to text views
+            amethystView.setText(String.valueOf(amethystAmoount));
+            rubyView.setText(String.valueOf(rubyAmount));
+            yellowDiamondView.setText(String.valueOf(yellowDiamondAmont));
+            sapphireView.setText(String.valueOf(sapphireAmount));
+            phosphophylliteView.setText(String.valueOf(phosphophylliteAmount));
+        }
     }
 
+    /**
+     * Method that launch CheckoutActivity
+     * @param view Current view
+     */
     public void launchCheckoutActivity(View view) {
         Intent intent = new Intent(this, CheckoutActivity.class);
         intent.putExtra("sub", subtotal);
@@ -132,5 +155,20 @@ public class MenuActivity extends AppCompatActivity {
         total = subtotal + tps + tvq;
     }
 
+    /**
+     * Method that saves the values when screen goes to landscape
+     * @param outState the save state
+     */
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        //Saving the values
+        outState.putInt("amethystCount", amethystAmoount);
+        outState.putInt("rubyCount", rubyAmount);
+        outState.putInt("yellowDiamondCount", yellowDiamondAmont);
+        outState.putInt("sapphireCount", sapphireAmount);
+        outState.putInt("phosphophylliteCount", phosphophylliteAmount);
+    }
 
 }
